@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BD8D060-AAB4-4777-8B34-B7EE771CBA49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentRegistrationSystem</RootNamespace>
+    <AssemblyName>StudentRegistrationSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\Address.cs" />
+    <Compile Include="AddStudentClassToSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentClassToSchedule.Designer.cs">
+      <DependentUpon>AddStudentClassToSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSignInSuccessful.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSignInSuccessful.Designer.cs">
+      <DependentUpon>AdminSignInSuccessful.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseManipulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseManipulationForm.Designer.cs">
+      <DependentUpon>CourseManipulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Courses.cs" />
+    <Compile Include="InstructorManipulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorManipulationForm.Designer.cs">
+      <DependentUpon>InstructorManipulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionManipulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionManipulationForm.Designer.cs">
+      <DependentUpon>SectionManipulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_OR_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_OR_Student.Designer.cs">
+      <DependentUpon>Admin_OR_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_SignIn.Designer.cs">
+      <DependentUpon>Student_SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManipulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentManipulationForm.Designer.cs">
+      <DependentUpon>StudentManipulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_SignIn_Successful.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_SignIn_Successful.Designer.cs">
+      <DependentUpon>Student_SignIn_Successful.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_SignIn.Designer.cs">
+      <DependentUpon>Admin_SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing.Designer.cs">
+      <DependentUpon>Testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessObjects\Schedule.cs" />
+    <Compile Include="BusinessObjects\Section.cs" />
+    <Compile Include="BusinessObjects\Student.cs" />
+    <Compile Include="BusinessObjects\Teacher.cs" />
+    <Compile Include="ViewStudentSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentSchedule.Designer.cs">
+      <DependentUpon>ViewStudentSchedule.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddStudentClassToSchedule.resx">
+      <DependentUpon>AddStudentClassToSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSignInSuccessful.resx">
+      <DependentUpon>AdminSignInSuccessful.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseManipulationForm.resx">
+      <DependentUpon>CourseManipulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorManipulationForm.resx">
+      <DependentUpon>InstructorManipulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionManipulationForm.resx">
+      <DependentUpon>SectionManipulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_OR_Student.resx">
+      <DependentUpon>Admin_OR_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_SignIn.resx">
+      <DependentUpon>Student_SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentManipulationForm.resx">
+      <DependentUpon>StudentManipulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_SignIn_Successful.resx">
+      <DependentUpon>Student_SignIn_Successful.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_SignIn.resx">
+      <DependentUpon>Admin_SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing.resx">
+      <DependentUpon>Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewStudentSchedule.resx">
+      <DependentUpon>ViewStudentSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
